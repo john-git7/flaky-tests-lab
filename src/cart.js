@@ -1,5 +1,9 @@
 const cart = [];
 
+function clearCart() {
+  cart.length = 0;
+}
+
 function addItem(item) {
   cart.push(item);
 }
@@ -15,4 +19,4 @@ function getCart() {
   return cart;
 }
 
-module.exports = { addItem, removeItem, getCart };
+module.exports = { addItem, removeItem, getCart,clearCart  };
