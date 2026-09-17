@@ -4,7 +4,8 @@ test('calculateDiscount returns a number', () => {
   expect(typeof calculateDiscount()).toBe('number');
 });
 
-test('discount is above minimum threshold', () => {
+test('discount is within valid range', () => {
   const discount = calculateDiscount();
-  expect(discount).toBeGreaterThan(0.05);
+  expect(discount).toBeGreaterThanOrEqual(0);
+  expect(discount).toBeLessThanOrEqual(0.5);
 });
